@@ -1,0 +1,1 @@
+char* read_shader_from_file(const char* filename);

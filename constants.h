@@ -1,0 +1,17 @@
+#pragma once
+
+#define PROJECT_NAME "drogue"
+#define MAJOR_VERSION 0
+#define MINOR_VERSION 1
+
+#define WINDOW_WIDTH_RATIO 0.5f
+#define WINDOW_HEIGHT_RATIO 0.6f
+#define WINDOW_TITLE PROJECT_NAME
+#define FRAME_RATE 144
+#define WORLD_WIDTH 50
+#define WORLD_HEIGHT 50
+#define TILE_WIDTH 40
+#define TILE_HEIGHT 40
+
+#define PLAYER_SIZE 20
+
