@@ -1,7 +1,9 @@
-export module camera;
+module;
 
-import "constants.h";
-import <SDL2/SDL_opengl.h>;
+#include "constants.h"
+#include <SDL2/SDL_opengl.h>
+
+export module camera;
 
 export struct Camera
 {

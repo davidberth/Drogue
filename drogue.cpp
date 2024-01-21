@@ -42,15 +42,16 @@ int main(int argc, char* args[])
     int window_width = (int)(screen_width * WINDOW_WIDTH_RATIO);
     int window_height = (int)(screen_height * WINDOW_HEIGHT_RATIO);
 
-    int window_startx = (int)((screen_width - window_width) / 2);
-    int window_starty = (int)((screen_height - window_height) / 2);
-
     int32_t WindowFlags = SDL_WINDOW_OPENGL;
 
     
     SDL_Window* window = SDL_CreateWindow(PROJECT_NAME,
-        window_startx, window_starty, 
+        SDL_WINDOWPOS_CENTERED, SDL_WINDOWPOS_CENTERED, 
         window_width, window_height, WindowFlags);
+
+    SDL_Surface* icon = SDL_LoadBMP("icon/icon.bmp");
+    SDL_SetWindowIcon(window, icon);
+
     SDL_GLContext context = SDL_GL_CreateContext(window);
 
     buffer << PROJECT_NAME << " " << MAJOR_VERSION << ":" <<
@@ -65,7 +66,6 @@ int main(int argc, char* args[])
 
     initialize_tiles();
     initialize_world(WORLD_WIDTH, WORLD_HEIGHT);
-
     initialize_camera();
 
 
@@ -120,6 +120,8 @@ int main(int argc, char* args[])
 
     destroy_world();
     cleanup_tiles();
+
+    SDL_FreeSurface(icon);
 
     return EXIT_SUCCESS;
 }

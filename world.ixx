@@ -1,13 +1,12 @@
-export module world;
+module;
 
-import "constants.h";
-
+#include "constants.h"
 import <stdlib.h>;
 import <stdio.h>;
 import <SDL2/SDL_opengl.h>;
 
+export module world;
 import tile;
-
 
 Vertex* world_vertices;
 

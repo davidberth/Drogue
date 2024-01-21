@@ -1,11 +1,10 @@
+module;
+
+#include <SDL2/SDL_opengl.h>
+#include <stdlib.h>
+#include "constants.h"
+
 export module tile;
-
-import <SDL2/SDL_opengl.h>;
-import <stdio.h>;
-import <stdlib.h>;
-
-import "constants.h";
-
 
 float tile_reds[] = { 0.0f, 0.7f, 0.0f, 0.0f };
 float tile_greens[] = { 0.0f, 0.0f, 0.7f, 0.0f };
